@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>ReMed — Prescription Reminders on WhatsApp</title>
+    <link rel="stylesheet" href="/static/style.css" />
+  </head>
+  <body>
+    <header class="nav-wrap">
+      <div class="container nav-bar">
+        <a class="brand" href="#">ReMed</a>
+        <nav class="nav-links">
+          <a href="#how">How it Works</a>
+          <a href="#register">Register</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <section id="hero" class="hero">
+        <div class="hero-content">
+          <h1>Never Miss a Dose — Simple WhatsApp Reminders</h1>
+          <p class="lead">ReMed reads prescriptions shared on WhatsApp and schedules reminders — delivered as texts or voice messages — so patients and caregivers stay on track.</p>
+          <div class="cta-row">
+            <a class="btn" href="#register">Get Early Access</a>
+            <a class="btn ghost" href="#how">See How</a>
+          </div>
+        </div>
+        <div class="hero-visual" aria-hidden="true">
+          <img src="/static/picture.png" alt="ReMed Hero Visual" height = 500 width = 500/>
+        </div>
+      </section>
+
+      <section id="how" class="card">
+        <h2>How ReMed Works</h2>
+        <div class="steps-grid">
+          <div class="step">
+            <div class="step-title">1. Upload Your Prescription 📸</div>
+            <div class="step-desc">Send a photo of your prescription directly on WhatsApp. No app download. No complicated setup.</div>
+          </div>
+
+          <div class="step">
+            <div class="step-title">2. We Read & Organize It 🧠</div>
+            <div class="step-desc">Our system extracts medicine names and understands dosage instructions using intelligent image and language processing.</div>
+          </div>
+
+          <div class="step">
+            <div class="step-title">3. Confirm Your Schedule ✅</div>
+            <div class="step-desc">Review the detected medicines and confirm or edit timings easily through WhatsApp.</div>
+          </div>
+
+          <div class="step">
+            <div class="step-title">4. Get Timely Reminders ⏰</div>
+            <div class="step-desc">Receive automated text or voice reminders so you never miss a dose.</div>
+          </div>
+        </div>
+      </section>
+
+      <section id="register" class="card">
+        <h2>Request Early Access</h2>
+        <p class="hint">Enter your details and we'll set up the ReMed WhatsApp webhook for your number.</p>
+
+        <form id="registerForm" class="form">
+          <div class="form-row">
+            <label class="field">
+              <span class="label">Full name</span>
+              <input type="text" name="name" id="name" required placeholder="Enter Your Name" />
+            </label>
+
+            <label class="field">
+              <span class="label">Phone number (WhatsApp)</span>
+              <input type="tel" name="phone" id="phone" required placeholder="Enter your Number" />
+            </label>
+          </div>
+
+          <div class="actions">
+            <button type="submit" class="btn">Request Access</button>
+            <div id="formMessage" class="form-message" aria-live="polite"></div>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+    <footer class="footer">
+      <div class="container">© ReMed — Prescription reminders on WhatsApp</div>
+    </footer>
+
+    <script src="/static/script.js"></script>
+  </body>
+</html>

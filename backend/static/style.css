@@ -1,0 +1,74 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, Arial; background:#f5f7fa; color:#0f172a; }
+
+.container { max-width: 1100px; margin: 0 auto; padding: 20px; }
+
+/* Navigation */
+.nav-wrap { background: #fff; box-shadow: 0 2px 20px rgba(2,6,23,0.06); position: sticky; top: 0; z-index: 40; }
+.nav-bar { display:flex; align-items:center; justify-content:space-between; gap:16px; padding:14px 24px; }
+.brand { font-weight:800; color:#063970; text-decoration:none; font-size:20px; letter-spacing:0.2px; }
+.nav-links a { margin-left:18px; text-decoration:none; color:#475569; font-weight:700; padding:6px 10px; border-radius:8px; }
+.nav-links a:hover { color:#063970; background:rgba(6,57,112,0.04); }
+
+.hero { background: linear-gradient(90deg,#2b6cb0 0%,#1e3a8a 100%); color:#fff; padding:80px 24px; border-radius:12px; margin:20px 0; text-align:left; display:flex; gap:24px; align-items:center; }
+.hero-content { flex:1; }
+.hero h1 { font-size:36px; margin-bottom:8px; line-height:1.02; }
+.hero p.lead { opacity:0.95; font-size:17px; margin-bottom:14px; }
+.hero-visual { width:240px; height:240px; background:rgba(255,255,255,0.06); border-radius:18px; display:flex; align-items:center; justify-content:center; }
+
+.cta-row { display:flex; gap:12px; align-items:center; }
+.btn.ghost { background:transparent; border:1px solid rgba(255,255,255,0.14); color:rgba(255,255,255,0.95); padding:10px 14px; }
+
+.card { background:#fff; padding:28px; border-radius:12px; box-shadow:0 10px 30px rgba(2,6,23,0.04); margin:18px 0; }
+.card h2 { margin-bottom:12px; font-size:22px; }
+
+.form { max-width:760px; margin:0 auto; display:flex; flex-direction:column; gap:12px; }
+.form-row { display:grid; grid-template-columns:1fr; gap:12px; }
+.field { display:flex; flex-direction:column; text-align:left; }
+.label { font-size:13px; color:#334155; margin-bottom:6px; }
+input[type="text"], input[type="tel"], input[type="file"] { padding:12px 14px; border-radius:10px; border:1px solid #e6edf3; outline:none; font-size:15px; background:#fbfdff; }
+input:focus { box-shadow:0 6px 20px rgba(37,99,235,0.06); border-color:#1e40af; }
+
+.actions { display:flex; gap:12px; align-items:center; }
+.btn { display:inline-block; background:#063970; color:#fff; padding:10px 16px; border-radius:10px; font-weight:700; text-decoration:none; border:none; cursor:pointer; }
+.btn:hover { background:#042a4f; }
+.form-message { font-size:14px; color:#0f5132; margin-left:6px; }
+.hint { font-size:13px; color:#6b7280; margin-top:10px; }
+
+.footer { padding:18px 0; text-align:center; color:#94a3b8; margin-top:20px; }
+
+@media (min-width:900px) {
+  .nav-links { display:flex; align-items:center; }
+  .hero h1 { font-size:44px; }
+  .form-row { grid-template-columns:1fr 1fr; }
+}
+
+@media (max-width:899px) {
+  .hero { padding:36px 18px; flex-direction:column; text-align:center; }
+  .hero-visual { display:none; }
+  .form-row { grid-template-columns:1fr; }
+}
+
+/* Grid features */
+.grid-3 { display:grid; grid-template-columns:1fr; gap:16px; }
+.feature { text-align:left; }
+.feature h3 { margin-bottom:8px; }
+
+@media (min-width:1100px) {
+  .grid-3 { grid-template-columns:repeat(3,1fr); }
+}
+
+/* Steps */
+.steps { list-style:none; padding-left:0; display:flex; flex-direction:column; gap:10px; }
+.steps li { background:linear-gradient(180deg,#fff,#fbfdff); padding:12px 14px; border-radius:8px; border:1px solid #eef2ff; }
+
+/* Toast */
+.toast { position: fixed; right: 20px; bottom: 24px; min-width:260px; max-width:420px; padding:12px 14px; border-radius:12px; box-shadow:0 10px 30px rgba(2,6,23,0.12); display:none; align-items:center; gap:12px; z-index:9999; }
+.toast.show { display:flex; }
+.toast.success { background: linear-gradient(90deg,#ECFDF5,#DCFCE7); color:#064E3B; border:1px solid #86efac; }
+.toast.error { background: linear-gradient(90deg,#FFF1F2,#FFE4E6); color:#7f1d1d; border:1px solid #fca5a5; }
+.toast .icon { width:28px; height:28px; display:inline-flex; align-items:center; justify-content:center; border-radius:6px; }
+.toast.success .icon { background:#d1fae5; color:#065f46; }
+.toast.error .icon { background:#fecaca; color:#7f1d1d; }
+
